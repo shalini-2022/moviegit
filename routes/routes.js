@@ -1,0 +1,32 @@
+const express=require('express')
+const router=express.Router()
+const functions = require('../controller/index') 
+let routes = (app)=>
+{
+    router.post('/register',functions.registration)
+    router.post('/year',functions.user)
+    router.post('/run',functions.time)
+    router.post('/director',functions.details)
+    router.post('/country',functions.movie)
+    router.post('/rate',functions.rating)
+    router.post('/rating',functions.rate)
+    router.post('/imdb',functions.rated)
+    router.post('/vote',functions.vote)
+    router.post('/votes',functions.rates)
+    router.post('/genres',functions.find)
+    router.post('/award',functions.awards)
+    router.post('/alldetails',functions.all)
+    router.post('/cast',functions.castdetails)
+    router.post('/release',functions.releasedetails)
+    router.post('/title',functions.titledetails)
+    router.post('/tomato',functions.tomatodetails)
+    router.post('/releases',functions.released)
+    router.post('/full',functions.fullplot)
+    router.post('/plot',functions.plot)
+    router.post('/justice',functions.justice)
+    router.post('/time',functions.runtime)
+    router.post('/21',functions.data21)
+    app.use('/api',router)
+}
+module.exports=
+routes
